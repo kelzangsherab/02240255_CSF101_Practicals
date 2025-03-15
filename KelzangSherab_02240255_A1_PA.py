@@ -32,15 +32,15 @@ def consonant_count(text):
             count += 1
     return count
 
-def min_max(numbers):
+def min_max(number):
 
-    smallest = min(numbers)
-    largest = max(numbers)
+    smallest = min(number)
+    largest = max(number)
     return smallest, largest
 
-def is_palindrome(text):
+def is_palindrome(content):
 
-    text = text.replace(" ", "").lower()
+    content = content.replace(" ", "").lower()
     return text == text[::-1]
 
 def word_counter(path):
@@ -65,26 +65,26 @@ def display():
     print("4. find Min and Max numbers")
     print("5. check for pelindrone")
     print("6. Word counter")
-    print("7. Exit")
+    print("7. Exiting")
 
 def main():
     while True:
         display()
         try:
-            choice = int(input("Enter your choice (1-7): "))
+            choice = int(input("select your choice (1-7): "))
             if choice == 1:
-                start = int(input("Enter the start of the range: "))
-                end = int(input("Enter the end of the range: "))
+                start = int(input("select the start of the range: "))
+                end = int(input("select the end of the range: "))
                 print(f"Sum of prime numbers in range {start} to {end}: {prime_sum(start, end)}")
             elif choice == 2:
                 value = float(input("Enter the length value: "))
-                direction = input("Enter direction ('M' for meters to feet, 'F' for feet to meters): ").upper()
+                direction = input("Enter direction ('m' for meters to feet, 'f' for feet to meters): ").upper()
                 print(f"Converted value: {length_converter(value, direction)}")
             elif choice == 3:
                 text = input("Enter the text string: ")
                 print(f"Number of consonants: {consonant_count(text)}")
             elif choice == 4:
-                numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
+                numbers = list(map(int, input("Enter numbers by keeping  spaces: ").split()))
                 smallest, largest = min_max(numbers)
                 print(f"Smallest: {smallest}, Largest: {largest}")
             elif choice == 5:
@@ -101,9 +101,9 @@ def main():
         except ValueError as e:
             print(f"Invalid input: {e}")
         
-        continue_choice = input("Do you want to perform another calculation? (yes/no): ").lower()
+        continue_choice = input("want to try once more? (yes/no): ").lower()
         if continue_choice != 'y':
-            print("Exiting the program.")
+            print("Exiting.")
             break
 
 if __name__ == "__main__":
