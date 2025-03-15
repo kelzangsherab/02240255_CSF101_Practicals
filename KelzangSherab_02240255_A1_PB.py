@@ -1,15 +1,15 @@
 import random
 
-def guess_game():
+def guessing_game():
     print("Guess Number Game")
     number_to_guess = random.randint(1, 10)  
     attempts = 0
 
     while True:
         try:
-            user_guess = int(input("Guess a number between 1 and 10: "))
+            user_guess = int(input("enter any number between 1 and 10: "))
         except ValueError:
-            print("Invalid input! Please enter a valid number.")
+            print("invalid input! Please enter a ranged number.")
             continue
         
         attempts += 1
